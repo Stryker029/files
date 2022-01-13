@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Stryker Cars Car Dealership</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" rel="stylesheet">
+</head>
+<body>
+	<section id="header" class="header">
+		<div class="nav-bar">
+			<div class="logo">
+				<a href="#">Bendy</a>
+			</div>
+			<div class="menu">
+				<ul> 
+					<li><a href="#" class="active">Cars</a></li>
+					<li><a href="#">History</a></li>
+					<li><a href="#">Technology</a></li>
+					<li><a href="#">Production</a></li>
+					<li><a href="#">Review</a></li>
+				</ul>
+			</div>
+			<div class="social-media">
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+				</ul>
+			</div>
+		</div>
+ 		<div class="hero">
+			<div class="row">
+				<div class="left-sec">
+					<div class="content">
+						<h2><span>Bendy</span><br>Coupe</h2>
+						<p>Shaped after an egg, this car is perfect little coupé for the starting life of a gentleman driver.</p>
+					</div>
+					<button class="discover-btn">
+						<a href="#">Discover</a><span><i class="fa fa-arrow-circle-right"></i></span>
+					</button>
+					<div class="information">
+					<div class="production">
+						<p>Production</p>
+						<h2>2014-2022</h2>
+					</div>
+					<div class="production">
+						<p>Designer</p>
+						<h2>Rookie Worker</h2>
+					</div>
+					</div>
+				</div>
+				<div class="right-sec">
+					<div class="my-car">
+						<div><img src="img/1.png"></div>
+						<div><img src="img/2.png"></div>
+						<div><img src="img/3.png"></div>
+						<div><img src="img/4.png"></div>
+						<div><img src="img/5.png"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(".my-car").slick({
+			autoplay:true,
+			dots:true,
+			speed:1000,
+			customPaging : function(slider, i) {
+    		var thumb = $(slider.$slides[i]).data();
+    		return '<a>'+(i+1)+'</a>';
+  			},
+		})
+	});
+	</script>
+</body>
+</html>
